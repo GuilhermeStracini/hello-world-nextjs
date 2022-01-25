@@ -31,30 +31,3 @@
     opacity: 0.8;
     padding-right: 5px;
 }
-
-.counter {
-    background-color: purple;
-    color: white;
-    border-radius: 50px;
-    padding: 20px;
-    text-align: center;
-}
-
-.clearAll {
-    float: left;
-}
-
-
-.clearAll button {
-    cursor: pointer;
-    background-color: goldenrod;
-    color: white;
-    font-weight: bold;
-    border: none;
-    height: 32px;
-    float: right;
-}
-
-.clearAll button:hover {
-    background-color: orangered;
-}
