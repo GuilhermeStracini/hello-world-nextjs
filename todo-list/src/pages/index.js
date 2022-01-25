@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import ToDoList from '../hooks/ToDoList'
+import ToDoList from '../hooks/toDoList'
 import styles from '../styles/Index.module.css'
 
 export default function IndexPage({ items }) {
