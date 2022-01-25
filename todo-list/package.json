@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest -config ./config/jest.config.js"
+    "test": "jest --config ./config/jest.config.js"
   },
   "dependencies": {
     "next": "^10.0.1",
