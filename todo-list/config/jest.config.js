@@ -1,6 +1,10 @@
 module.exports = {
-    testEnvironment: 'jest-environment-jsdom',
-    setupFilesAfterEnv: ["./jest.setup.js"],
+    rootDir: "../",
+    testEnvironment: "jest-environment-jsdom",
+    setupFilesAfterEnv: ["./config/jest.setup.js"],
+    transform: {
+      '\\.js$': ['babel-jest', { configFile: './config/.babelrc' }]
+    },
     moduleNameMapper: {
       "^@components(.*)$": "<rootDir>/src/components$1",
       "^@pages(.*)$": "<rootDir>/src/pages$1",
