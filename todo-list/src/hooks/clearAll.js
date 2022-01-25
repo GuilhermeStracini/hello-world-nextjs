@@ -1,4 +1,4 @@
-import styles from '../styles/Tasks.module.css'
+import styles from '../styles/Controls.module.css'
 
 const ClearAll = (props) => {
     const handleClear = async () => {
