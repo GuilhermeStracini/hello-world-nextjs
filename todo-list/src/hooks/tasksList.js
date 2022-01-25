@@ -1,5 +1,5 @@
-import TaskInput from './TaskInput'
-import Tasks from './Tasks'
+import TaskInput from './taskInput'
+import Tasks from './tasks'
 import { useState } from "react";
 
 const ToDoList = (props) => 

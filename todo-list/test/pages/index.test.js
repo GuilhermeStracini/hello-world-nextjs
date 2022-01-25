@@ -1,7 +1,7 @@
 
 import React from "react";
 import { render, screen } from "../test-utils";
-import IndexPage from "src/pages/index";
+import IndexPage from "@pages/index.js";
 
 describe("IndexPage", () => {
   it("should render the heading", () => {
