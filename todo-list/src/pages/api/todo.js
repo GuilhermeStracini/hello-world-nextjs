@@ -32,7 +32,7 @@ export default function handler(req, res) {
 
       const id = getNewId(tasks.map((task) => task.id));
 
-      tasks.push({
+      tasks.unshift({
         id,
         task: req.body.newTask,
         date: new Date()

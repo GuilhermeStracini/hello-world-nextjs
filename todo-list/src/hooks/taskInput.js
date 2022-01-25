@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from '../styles/TaskInput.module.css'
 
 const TaskInput = (props) => 
 {
@@ -21,13 +22,14 @@ const TaskInput = (props) =>
         if(resp.status == 200){
             setTodoItem("");
             props.setItems(content);
+            return;
         }
         
         alert(`[HTTP ${resp.status}] ${content.error}`);
     }
     
     return (
-        <div>
+        <div className={styles.inputSection}>
             <label>Task:</label>
             <input type="text" value={todoItem} onChange={(e) => setTodoItem(e.target.value)} onKeyDown={handleEnter} />
             <button onClick={handleAdd}>Add</button>
