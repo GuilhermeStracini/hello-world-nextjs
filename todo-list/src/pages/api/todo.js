@@ -2,6 +2,16 @@ const fs = require('fs');
 
 const filePath = "tasks.json";
 
+function getNewId(existingIds){
+  while(true){
+    const newId = Math.floor(Math.random() * 10240);
+    
+    if(!existingIds.includes(newId)){
+        return newId;
+    }
+  }
+}
+
 export default function handler(req, res) {
 
   let rawdata = fs.readFileSync(filePath);
@@ -13,8 +23,17 @@ export default function handler(req, res) {
     break;
 
     case "POST":
+      const newTask = req.body.newTask;  
+
+      if(newTask == null || newTask.length == 0 || newTask.replace(/\s/g,"") == "")
+      {
+          return res.status(400).json({error: "new task cannot be empty"});
+      }
+
+      const id = getNewId(tasks.map((task) => task.id));
+
       tasks.push({
-        id: Math.floor(Math.random() * 10 * 1024),
+        id,
         task: req.body.newTask,
         date: new Date()
       });

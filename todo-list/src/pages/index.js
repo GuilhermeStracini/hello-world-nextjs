@@ -2,7 +2,7 @@ import Head from 'next/head'
 import ToDoList from './ToDoList'
 import styles from '../styles/Index.module.css'
 
-export default function Index({ items }) {
+export default function IndexPage({ items }) {
   return (
     <div className={styles.container}>
       <Head>

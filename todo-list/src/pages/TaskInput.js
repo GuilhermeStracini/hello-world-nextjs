@@ -15,8 +15,15 @@ const TaskInput = (props) =>
             headers: { 'Content-Type': 'application/json'  },
             body: JSON.stringify({ newTask: todoItem }) 
         });
-        setTodoItem("");
-        props.setItems(await resp.json());        
+
+        var content = await resp.json();
+
+        if(resp.status == 200){
+            setTodoItem("");
+            props.setItems(content);
+        }
+        
+        alert(`[HTTP ${resp.status}] ${content.error}`);
     }
     
     return (
