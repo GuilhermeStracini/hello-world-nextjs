@@ -11,4 +11,5 @@ module.exports = {
       "^@hooks(.*)$": "<rootDir>/src/hooks$1",
       "\\.(css|less|scss|sss|styl)$": "<rootDir>/node_modules/jest-css-modules"
     },
+    testPathIgnorePatterns: ["<rootDir>/cypress/"],
   };
