@@ -9,7 +9,7 @@ const ToDoList = (props) =>
     
     return (
         <div>
-            <Controls items={items.length} setItems={setItems} />
+            <Controls items={items?.length} setItems={setItems} />
             <TaskInput setItems={setItems} />
             <Tasks items={items} setItems={setItems} />
         </div>
