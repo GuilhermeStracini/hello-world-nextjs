@@ -1,7 +1,7 @@
 context('App', () => {
     
     beforeEach(() => {
-        cy.request('POST', '/api/clear');
+        cy.request('DELETE', '/api/todo');
     })
 
     it('should load our app and show content', () => {
