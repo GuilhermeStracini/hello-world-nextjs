@@ -11,8 +11,6 @@ const Detail = ({item}) => {
       </div>)
 }
 
-22
-
 export async function getServerSideProps(context) {
   const { id } = context.query;
 

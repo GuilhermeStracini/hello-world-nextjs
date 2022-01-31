@@ -5,17 +5,17 @@ function Faq() {
     const [faqData, setFaqData] = useState([])
 
     useEffect(async () => {
-        const response = await fetch("https://localhost:3000/api/faq")
+        const response = await fetch("http://localhost:3000/api/faq")
         const data = await response.json()
-        
+
         setFaqData(data)
-    }, [], 1)
+    }, [])
 
 return (<div>
         <ul>
-            {faqData?.map((item) => {
+            {faqData?.map((item) =>
                 <li>{item.topic}</li>
-            })}
+            )}
         </ul>
     </div>)
 }

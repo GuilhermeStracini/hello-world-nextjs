@@ -1,6 +1,11 @@
 import styles from '../styles/Controls.module.css'
+import { useContext} from "react"
+import TasksContext from "../contexts/tasks"
 
 const ClearAll = (props) => {
+
+    const [tasks, setTasks] = useContext(TasksContext)
+
     const handleClear = async () => {
         const resp = await fetch('http://localhost:3000/api/todo/', {
             method: 'DELETE',
@@ -8,14 +13,14 @@ const ClearAll = (props) => {
         })
 
         if(resp.status == 200){
-            props.setItems([])
+            setTasks([])
             return
         }
         
         alert(`[HTTP ${resp.status}]`)
     }
 
-    if(props.items == 0){
+    if(tasks.length == 0){
         return ("")
     }
 

@@ -1,38 +1,38 @@
-import { useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import styles from '../styles/TaskInput.module.css'
+import TasksContext from "../contexts/tasks"
+import useAddTask from "../hooks/addTask"
 
-const TaskInput = (props) => 
+const TaskInput = () => 
 {
+    const [tasks, setTasks] = useContext(TasksContext)
     const [todoItem, setTodoItem] = useState("");
+    const [data, createTask] = useAddTask(todoItem)
+
+    const handleChange = (event) => setTodoItem(event.target.value)
 
     const handleEnter = (event) => {
         if (event.key === "Enter")
-        handleAdd();
-    };
-
-    const handleAdd = async () => {
-        const resp = await fetch('http://localhost:3000/api/todo', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json'  },
-            body: JSON.stringify({ newTask: todoItem }) 
-        });
-
-        var content = await resp.json();
-
-        if(resp.status == 200){
-            setTodoItem("");
-            props.setItems(content);
-            return;
+        {
+            createTask();
         }
-        
-        alert(`[HTTP ${resp.status}] ${content.error}`);
     }
+
+    useEffect(() => {
+        if(data.tasks)
+        {
+            setTasks(data.tasks)
+            setTodoItem("")
+        }else if(data.error){
+            alert(data.error)
+        }
+    }, [data])
     
     return (
         <div className={styles.inputSection}>
             <label>Task:</label>
-            <input type="text" value={todoItem} onChange={(e) => setTodoItem(e.target.value)} onKeyDown={handleEnter} />
-            <button onClick={handleAdd}>Add</button>
+            <input value={todoItem} onChange={handleChange} onKeyDown={handleEnter} required />
+            <button onClick={createTask}>Add</button>
         </div>
     )
 }

@@ -4,7 +4,7 @@ const filePath = "tasks.json";
 
 export default function handler(req, res) {
     const rawdata = fs.readFileSync(filePath);
-    const tasks = JSON.parse(rawdata);
+    let tasks = JSON.parse(rawdata);
 
     const filtered = tasks.filter((t) => t.id == req.query.id)
 
@@ -22,7 +22,7 @@ export default function handler(req, res) {
             tasks = tasks.filter( (task) => task.id != req.query.id);
             fs.writeFileSync(filePath, JSON.stringify(tasks));
   
-            res.status(200).json(tasks);
+            res.status(200).send(null);
         break
 
         default:

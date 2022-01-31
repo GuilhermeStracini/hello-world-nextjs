@@ -1,8 +1,17 @@
 import Head from 'next/head'
 import ToDoList from '../components/toDoList'
 import styles from '../styles/Index.module.css'
+import { useContext, useEffect } from 'react';
+import TasksContext from '../contexts/tasks';
 
 export default function IndexPage({ items }) {
+
+  const [tasks, setTasks] = useContext(TasksContext)
+
+  useEffect(() => {
+    setTasks(items)
+  }, [])
+
   return (
     <div className={styles.container}>
       <Head>
@@ -16,7 +25,7 @@ export default function IndexPage({ items }) {
           ToDo app
         </h1>
         
-        <ToDoList items={items} />
+        <ToDoList />
         
       </main>
     </div>
