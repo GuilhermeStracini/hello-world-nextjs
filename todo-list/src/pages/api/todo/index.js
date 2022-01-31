@@ -44,13 +44,12 @@ export default function handler(req, res) {
     break;
 
     case "DELETE":
-      tasks = tasks.filter( (task) => task.id != req.query.id);
-      fs.writeFileSync(filePath, JSON.stringify(tasks));
-  
-      res.status(200).json(tasks);
+      fs.writeFileSync(filePath, "[]");  
+      res.status(200).json("[]");
     break;
+    
     default: 
-      req.status(405);
+      res.status(405);
     break;
   } 
 }
