@@ -15,6 +15,7 @@ describe("getServerSideProps", () => {
 });
 
 describe("IndexPage", () => {
+  
   it("should render the heading", () => {
     render(<IndexPage items={fakeTodoData} />);
 
