@@ -1,0 +1,32 @@
+.button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.green {
+    background-color: green;
+}
+
+.green:hover{
+    background-color: greenyellow;
+    color: black;
+}
+
+.yellow {
+    background-color: goldenrod;
+}
+
+.yellow:hover {
+    background-color: orange;
+}
+
+.red {
+    background-color: red;    
+}
+
+.red:hover {
+    background-color: orange;
+}
