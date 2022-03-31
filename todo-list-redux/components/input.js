@@ -1,5 +1,4 @@
 import { SaveButton } from "./buttons"
-import { useState } from "react"
 
 const InputTask = ( { currentValue, onChangeAction, onSaveAction }) => {
 

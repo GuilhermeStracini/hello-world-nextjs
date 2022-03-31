@@ -4,7 +4,7 @@ import Todo from "../components/todo"
 import store from "../store/store"
 import { ADD_TASKS } from '../store/features/tasks/actions'
 
-export default function Home({ items }) {
+export default function Index({ items }) {
 
   store.dispatch({ type: ADD_TASKS, payload: items })
    

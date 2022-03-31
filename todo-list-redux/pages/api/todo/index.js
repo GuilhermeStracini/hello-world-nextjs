@@ -20,17 +20,19 @@ export default function handler(req, res) {
 
       const taskId = generateNewNumericId(tasks.map((task) => task.id));
 
-      tasks.unshift({
+      const task = {
         id: taskId,
         task: newTask,
         createdDate: new Date(),
         updatedDate: new Date(),
         done: false
-      });
+      };
+
+      tasks.unshift(task);
   
       putTodoFileContent(tasks)
   
-      res.status(200).json(tasks);
+      res.status(200).json(task);
     break;
 
     case "DELETE":

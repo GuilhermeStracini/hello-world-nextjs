@@ -3,9 +3,11 @@ import { useState } from "react"
 const useCreateTask = () => {
     const [status, setStatus] = useState('idle')
     const [errorMessage, setErrorMessage] = useState('')
+    const [taskAdded, setTaskAdded] = useState(null)
 
     const createTask = async (newTask) => {
-        setStatus('fetching')
+        setTaskAdded(null)
+        setStatus('fetching')        
 
         try {
             const response = await fetch(`http://localhost:3000/api/todo/`, {
@@ -18,6 +20,7 @@ const useCreateTask = () => {
 
             if(response.status == 200){
                 setStatus('fetched')
+                setTaskAdded(content)
             } else {
                 setStatus('error')
                 setErrorMessage(`[HTTP ${response.status}] ${content.errorMessage}`)
@@ -28,7 +31,7 @@ const useCreateTask = () => {
         } 
     }
 
-    return [createTask, status, errorMessage]
+    return [createTask, status, errorMessage, taskAdded]
 }
 
 export default useCreateTask

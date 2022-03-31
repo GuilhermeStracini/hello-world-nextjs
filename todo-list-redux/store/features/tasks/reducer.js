@@ -14,7 +14,7 @@ const tasksReducer = (state = { tasks: [] }, action) => {
             return { ...state, tasks: action.payload }
 
         case ADD_TASK:
-            return { ...state, tasks: state.tasks.unshift(action.payload) }
+            return { ...state, tasks: [ action.payload, ...state.tasks]}
         
         case REMOVE_TASK:
             return { ...state, tasks: state.tasks.filter(task => task.id !== parseInt(action.payload)) }
