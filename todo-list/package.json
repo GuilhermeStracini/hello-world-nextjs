@@ -29,6 +29,6 @@
     "eslint-config-next": "^0.2.4",
     "jest": "^27.4.7",
     "jest-css-modules": "^2.1.0",
-    "start-server-and-test": "^1.14.0"
+    "start-server-and-test": "^1.15.3"
   }
 }
