@@ -1,6 +1,6 @@
-# hello-world-nextjs
+# Hello World NextJS
 
-Hello World NextJS repository
+:books: A repository to learn NextJS
 
 Projects:
 
