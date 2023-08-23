@@ -1,6 +1,15 @@
 version: 2
+
 updates:
   - package-ecosystem: "npm"
     directory: "/todo-list/"
     schedule:
       interval: "weekly"
+    open-pull-requests-limit: 50
+    assignees: 
+     - "guibranco"
+    reviewers: 
+      - "guibranco"
+    labels:
+      - "npm"
+      - "dependencies"
