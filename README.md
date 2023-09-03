@@ -1,6 +1,6 @@
 # Hello World NextJS
 
-:books: A repository to learn NextJS
+:books: A repository to learn [NextJS](https://nextjs.org/)
 
 [![wakatime](https://wakatime.com/badge/github/GuilhermeStracini/hello-world-nextjs.svg)](https://wakatime.com/badge/github/GuilhermeStracini/hello-world-nextjs)
 [![Maintainability](https://api.codeclimate.com/v1/badges/949e3a90ac59eeba8fb1/maintainability)](https://codeclimate.com/github/GuilhermeStracini/hello-world-nextjs/maintainability)
