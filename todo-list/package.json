@@ -25,7 +25,7 @@
     "babel-jest": "^29.7.0",
     "cypress": "^13.2.0",
     "enzyme": "^3.11.0",
-    "eslint": "8.49.0",
+    "eslint": "8.50.0",
     "eslint-config-next": "^13.5.3",
     "jest": "^29.7.0",
     "jest-css-modules": "^2.1.0",
