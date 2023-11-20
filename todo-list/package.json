@@ -13,7 +13,7 @@
     "cy:run": "start-server-and-test dev 3000 cy:run-only"
   },
   "dependencies": {
-    "next": "14.0.2",
+    "next": "14.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.19.0"
