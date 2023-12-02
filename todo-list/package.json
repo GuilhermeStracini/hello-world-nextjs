@@ -19,7 +19,7 @@
     "react-router-dom": "^6.20.0"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/jest-dom": "^6.1.5",
     "@testing-library/react": "^14.1.2",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.8.0",
     "babel-jest": "^29.7.0",
