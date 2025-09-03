@@ -1,33 +1,33 @@
-.tasksList  {
-    list-style: none;
+.tasksList {
+  list-style: none;
 }
 .tasksList li {
-    font-size: 30px;
-    margin-top: 10px;
-    padding: 10px;
+  font-size: 30px;
+  margin-top: 10px;
+  padding: 10px;
 }
 
-.tasksList li:nth-child(even){
-    background-color: gray;
-    color: white;
+.tasksList li:nth-child(even) {
+  background-color: gray;
+  color: white;
 }
 
 .tasksList li button {
-    cursor: pointer;
-    background-color: red;
-    color: white;
-    font-weight: bold;
-    border: none;
-    height: 32px;
-    float: right;
+  cursor: pointer;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border: none;
+  height: 32px;
+  float: right;
 }
 
 .tasksList li button:hover {
-    background-color: orangered;
+  background-color: orangered;
 }
 
 .tasksList li span {
-    font-size: 12px;
-    opacity: 0.8;
-    padding-right: 5px;
+  font-size: 12px;
+  opacity: 0.8;
+  padding-right: 5px;
 }

@@ -1,24 +1,25 @@
 .inputSection {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .inputSection label {
-    font-weight: bold;
-    margin: 5px;
-    font-size: 32px;
+  font-weight: bold;
+  margin: 5px;
+  font-size: 32px;
 }
 
-.inputSection input, .inputSection button {
-    font-size: 32px;
-    height: 40px;
+.inputSection input,
+.inputSection button {
+  font-size: 32px;
+  height: 40px;
 }
 
 .inputSection button {
-    cursor: pointer;
-    color: white;
-    background-color: green;
+  cursor: pointer;
+  color: white;
+  background-color: green;
 }
 
 .inputSection button:hover {
-    background-color: darkgreen;
+  background-color: darkgreen;
 }
