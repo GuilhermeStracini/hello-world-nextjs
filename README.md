@@ -11,5 +11,5 @@
 
 Projects:
 
-- [X] [ToDo app](/todo-list)
+- [x] [ToDo app](/todo-list)
 - [ ] [name](/name)
