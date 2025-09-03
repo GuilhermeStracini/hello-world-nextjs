@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import ToDoList from '../components/toDoList'
-import styles from '../styles/Index.module.css'
+import Head from "next/head";
+import ToDoList from "../components/toDoList";
+import styles from "../styles/Index.module.css";
 
 export default function IndexPage({ items }) {
   return (
@@ -12,21 +12,17 @@ export default function IndexPage({ items }) {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          ToDo app
-        </h1>
-        
+        <h1 className={styles.title}>ToDo app</h1>
+
         <ToDoList items={items} />
-        
       </main>
     </div>
-  )
+  );
 }
 
 export async function getServerSideProps() {
-  const res = await fetch('http://localhost:3000/api/todo')
-  const items = await res.json()
-  
-  return { props: { items } }
-}
+  const res = await fetch("http://localhost:3000/api/todo");
+  const items = await res.json();
 
+  return { props: { items } };
+}
