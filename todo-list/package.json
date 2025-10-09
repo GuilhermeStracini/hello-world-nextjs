@@ -16,7 +16,7 @@
     "next": "15.5.4",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-router-dom": "^7.9.3"
+    "react-router-dom": "^7.9.4"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.9.1",
