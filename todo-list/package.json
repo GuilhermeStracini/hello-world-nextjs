@@ -13,7 +13,7 @@
     "cy:run": "start-server-and-test dev 3000 cy:run-only"
   },
   "dependencies": {
-    "next": "16.2.4",
+    "next": "16.2.6",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-router-dom": "^7.15.0"
@@ -26,7 +26,7 @@
     "cypress": "^15.14.2",
     "enzyme": "^3.11.0",
     "eslint": "9.39.2",
-    "eslint-config-next": "^16.2.4",
+    "eslint-config-next": "^16.2.6",
     "jest": "^30.4.1",
     "jest-css-modules": "^2.1.0",
     "start-server-and-test": "^3.0.2"
